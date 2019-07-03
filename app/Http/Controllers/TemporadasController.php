@@ -13,7 +13,6 @@ class TemporadasController extends Controller{
         $temporadas = $serie->temporadas;
         // $temporadas = Temporada::query()->where('serie_id', $serieId)->orderBy('numero')->get();
 
-
         return view('temporadas.index', compact('serie', 'temporadas'));
     }
 }
