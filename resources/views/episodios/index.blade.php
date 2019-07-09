@@ -3,7 +3,7 @@
 @section('cabecalho')
     Episodios
 @endsection
-        
+
 @section('conteudo')
 <form action="">
     <ul class="list-group">
@@ -11,7 +11,7 @@
             
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Episódio: {{ $episodio->capitulo}}
-                <input type="checkbox">
+                <input type="checkbox" name="episodios[]" value="{{ $episodio->id}}">
             </li>
         @endforeach
     </ul>
