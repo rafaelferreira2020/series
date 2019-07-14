@@ -7,7 +7,7 @@ Séries
 @section('conteudo')
 
 @if(!empty($mensagem))
-<div class="alert alert-success">{{ $mensagem }}</div>
+@include('mensagem', ['mensagem' => $mensagem])>
 @endif
 
 <a href="{{ route('formSerie') }}" class="btn btn-dark mb-3">Adicionar</a>

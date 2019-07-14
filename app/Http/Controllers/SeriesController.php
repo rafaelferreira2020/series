@@ -11,6 +11,10 @@ use App\Http\Requests\SeriesFormRequest;
 
 class SeriesController extends Controller {
 
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index(Request $request) {
         
         $series = Serie::query()
@@ -20,6 +24,7 @@ class SeriesController extends Controller {
         $mensagem = $request->session()->get('mensagem');
 
         return view('series.index', compact('series', 'mensagem'));
+        
     }
 
     public function create(){
